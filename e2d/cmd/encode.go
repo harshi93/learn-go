@@ -42,6 +42,29 @@ var encodeCmd = &cobra.Command{
 			fmt.Printf("Found file: %s\n", filePath)
 		}
 
+		// Check if file is empty
+		fileInfo, err := os.Stat(filePath)
+		if err != nil {
+			fmt.Printf("Error getting file info: %v\n", err)
+			return
+		} else if fileInfo.Size() == 0 {
+			fmt.Printf("Skipping encoding, file is empty: %s\n", filePath)
+			return
+		} else if fileInfo.IsDir() {
+			fmt.Printf("Skipping encoding, file is a directory: %s\n", filePath)
+			return
+		} else if filepath.Ext(filePath) == ".docx" || filepath.Ext(filePath) == ".pptx" {
+			fmt.Printf("Skipping encoding, file is a docx or pptx file: %s\n", filePath)
+			return
+		} else if filepath.Ext(filePath) == ".raw" || filepath.Ext(filePath) == ".avchd" || filepath.Ext(filePath) == ".prores" || filepath.Ext(filePath) == ".dnxhd" {
+			// RAW, AVCHD, ProRes, and DNxHD not to be encoded
+			fmt.Printf("Skipping encoding, file is a RAW, AVCHD, ProRes, or DNxHD file: %s\n", filePath)
+			return
+		} else if filepath.Ext(filePath) == ".gif" || filepath.Ext(filePath) == ".jpeg" || filepath.Ext(filePath) == ".svg" || filepath.Ext(filePath) == ".bmp" || filepath.Ext(filePath) == ".png" || filepath.Ext(filePath) == ".tiff" || filepath.Ext(filePath) == ".webp" || filepath.Ext(filePath) == ".raw" {
+			// gif, jpeg, svg, bmp, png, tiff, webp, and raw are not to be encoded
+			fmt.Printf("Skipping encoding, file is an image: %s\n", filePath)
+		}
+
 		// Read file content
 		fileContent, err := os.ReadFile(filePath)
 		if err != nil {
