@@ -4,12 +4,11 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 )
 
-func main() {
+func fileIO() {
 
 	file, err := os.Create("sample.txt")
 
@@ -21,7 +20,7 @@ func main() {
 
 	file.Close()
 
-	stream, err := ioutil.ReadFile("sample.txt")
+	stream, err := os.ReadFile("sample.txt")
 
 	if err != nil {
 		log.Fatal(err)

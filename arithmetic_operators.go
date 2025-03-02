@@ -14,6 +14,10 @@ import (
 	"fmt"
 )
 
-func main() {
+func arithmeticOps() {
 	fmt.Println("Hello Arithmetic Operators")
+}
+
+func arithmeticOpsCaller() {
+	arithmeticOps()
 }

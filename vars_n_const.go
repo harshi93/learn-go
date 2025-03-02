@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainVarsAndConst() {
 	// A constant is. a variable with a value that can't be changed
 	const pi float64 = 3.14
 
@@ -16,7 +16,8 @@ func main() {
 		varB = 3
 	)
 
-	x,y := 14,15 // this will create var x with value 14 and y with value 15 
+	x := 15 // this will create var x with value 15
+	fmt.Println(x)
 
 	fmt.Println(varA, varB)
 
@@ -27,4 +28,8 @@ func main() {
 	// get length of string
 	fmt.Println(len(Name))
 
+}
+
+func mainVarsAndConstCaller() {
+	mainVarsAndConst()
 }

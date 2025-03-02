@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainConditionals() {
 
 	var age int = 18
 	/*
@@ -26,4 +26,8 @@ func main() {
 	default:
 		fmt.Println("are you alive ?")
 	}
+}
+
+func mainConditionalsCaller() {
+	mainConditionals()
 }

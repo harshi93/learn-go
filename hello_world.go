@@ -5,6 +5,10 @@ package main
 
 import "fmt"
 
-func main() {
+func firstProgram() {
 	fmt.Println("Hello world! This is my first Go program")
+}
+
+func firstProgramCaller() {
+	firstProgram()
 }

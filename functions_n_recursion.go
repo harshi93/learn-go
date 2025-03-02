@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainFunctions() {
 
 	x, y := 5, 6
 
@@ -27,4 +27,8 @@ func factorial(num int) int {
 	}
 
 	return num * factorial(num-1)
+}
+
+func mainFunctionsCaller() {
+	mainFunctions()
 }

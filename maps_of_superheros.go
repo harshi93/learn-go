@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainSuperheroes() {
 
 	StudentAge := make(map[string]int)
 

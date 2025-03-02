@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func arraysAndSlices() {
 
 	EvenNum := [5]int{0, 2, 4, 6, 8} // way-1 of initializing array
 
@@ -32,7 +32,7 @@ func main() {
 	fmt.Println(sliced)
 
 	//define empty slice with data type
-	slice2 = make([]int, 5, 10)
+	slice2 := make([]int, 5, 10)
 
 	// copying contents of slice
 
@@ -46,4 +46,8 @@ func main() {
 
 	fmt.Println(slice3)
 
+}
+
+func arraysAndSlicesCaller() {
+	arraysAndSlices()
 }

@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainDpr() {
 
 	/*
 	   Panic is similar to exceptions in other language
@@ -63,3 +63,7 @@ func SecondRun() {
 	fmt.Println("I am not so excited")
 }
 */
+
+func mainDprCaller() {
+	mainDpr()
+}

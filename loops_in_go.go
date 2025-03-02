@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func loopsMain() {
 
 	for i := 1; i <= 15; i++ {
 
@@ -11,32 +11,6 @@ func main() {
 	}
 
 	whileLoopLikeForLoop()
-
-}
-
-func whileLoopLikeForLoop() {
-	i := 1
-
-	for i <= 10 {
-		fmt.Println("This is while loop like for loop", i)
-		i++
-	}
-}
-package main
-
-import "fmt"
-
-func main() {
-
-	for i := 1; i <= 15; i++ {
-
-		fmt.Println(i)
-
-	}
-
-	whileLoopLikeForLoop()
-
-	nestedFor()
 
 }
 
@@ -56,4 +30,9 @@ func nestedFor() {
 		}
 		fmt.Println()
 	}
+}
+
+func loopsMainCaller() {
+	loopsMain()
+	nestedFor()
 }

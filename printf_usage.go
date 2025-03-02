@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func arithmeticOperators() {
 	const pi float64 = 3.16412732
 	x := 5
 	isbool := true
